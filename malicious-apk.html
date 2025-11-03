@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Malware Detection Research - Pratham Patel</title>
+    <meta name="description" content="Machine Learning-based Android malware detection using Random Forest classifier with comprehensive static and dynamic analysis for enhanced mobile security.">
+    <meta name="keywords" content="Android malware detection, machine learning, Random Forest, mobile security, static analysis, dynamic analysis, APK analysis">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Machine Learning-based Android Malware Detection using Static and Dynamic Analysis</h1>
+            <nav>
+                <a href="index.html">← Back to Portfolio</a> |
+                <a href="#abstract">Abstract</a> |
+                <a href="#methodology">Methodology</a> |
+                <a href="#implementation">Implementation</a> |
+                <a href="#results">Results</a>
+            </nav>
+        </header>
+
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <p>
+                This research presents a comprehensive machine learning approach for Android malware detection, 
+                combining <strong>static and dynamic analysis techniques</strong> with a Random Forest classifier 
+                to achieve robust mobile security. The system provides a complete analysis pipeline from APK 
+                extraction to threat classification, with extensive visualization and reporting capabilities.
+            </p>
+
+            
+            <p><strong>Published in:</strong> Springer Lecture Notes in Networks and Systems, vol 507. <a href="https://link.springer.com/chapter/10.1007/978-3-032-07992-3_26">DOI: 10.1007/978-3-032-07992-3_26</a></p>
+        </section>
+
+        <section id="methodology">
+            <h2>Methodology & Architecture</h2>
+            
+            <img src="https://github.com/CodeWithInferno/MaliciousAPK/raw/main/Final%20Graphs%20Chosen/Flowchart.png" 
+                 alt="Malware Detection Flowchart" class="pub-img">
+            
+            <h3>Dual-Phase Analysis Approach</h3>
+            
+            <h4>Static Analysis</h4>
+            <ul>
+                <li><strong>Permissions Analysis:</strong> Extraction and evaluation of requested permissions</li>
+                <li><strong>API Calls:</strong> Identification of suspicious API usage patterns</li>
+                <li><strong>Code Structure:</strong> Analysis of APK internal structure and components</li>
+                <li><strong>Manifest Analysis:</strong> AndroidManifest.xml parsing for security indicators</li>
+            </ul>
+            
+            <h4>Dynamic Analysis</h4>
+            <ul>
+                <li><strong>Runtime Behavior:</strong> Monitoring application execution patterns</li>
+                <li><strong>Network Activity:</strong> Tracking communication and data transmission</li>
+                <li><strong>System Interactions:</strong> Monitoring file system and system call patterns</li>
+                <li><strong>Resource Usage:</strong> Analysis of CPU, memory, and battery consumption</li>
+            </ul>
+
+            <h3>Machine Learning Pipeline</h3>
+            <ul>
+                <li><strong>Feature Engineering:</strong> Comprehensive extraction of static and dynamic features</li>
+                <li><strong>Data Preprocessing:</strong> Normalization, encoding, and feature selection</li>
+                <li><strong>Random Forest Classification:</strong> Ensemble learning for robust detection</li>
+                <li><strong>Model Validation:</strong> Cross-validation and performance evaluation</li>
+            </ul>
+
+            <h3>Key Technical Features</h3>
+            <ul>
+                <li><strong>Automated APK Processing:</strong> Complete pipeline from APK to threat assessment</li>
+                <li><strong>Multi-dimensional Analysis:</strong> Integration of static and dynamic features</li>
+                <li><strong>Visualization Suite:</strong> Comprehensive charts and graphs for analysis results</li>
+                <li><strong>Scalable Architecture:</strong> Designed for batch processing and real-time analysis</li>
+            </ul>
+        </section>
+
+        <section id="implementation">
+            <h2>Technical Implementation</h2>
+            
+            <h3>Technology Stack</h3>
+            <ul>
+                <li><strong>Programming Language:</strong> Python</li>
+                <li><strong>Machine Learning:</strong> Scikit-learn, Random Forest Classifier</li>
+                <li><strong>APK Analysis:</strong> Androguard, APKTool</li>
+                <li><strong>Data Processing:</strong> Pandas, NumPy</li>
+                <li><strong>Visualization:</strong> Matplotlib, Seaborn</li>
+                <li><strong>Dynamic Analysis:</strong> Android Debug Bridge (ADB), custom monitoring tools</li>
+            </ul>
+
+            <h3>Feature Extraction Categories</h3>
+            <ul>
+                <li><strong>Permission Features:</strong> Analysis of Android permissions and their risk levels</li>
+                <li><strong>API Features:</strong> Identification of suspicious API calls and usage patterns</li>
+                <li><strong>Structural Features:</strong> APK file structure, size, and component analysis</li>
+                <li><strong>Behavioral Features:</strong> Runtime behavior patterns and system interactions</li>
+                <li><strong>Network Features:</strong> Communication patterns and data transmission analysis</li>
+            </ul>
+
+            <h3>Analysis Pipeline</h3>
+            <ol>
+                <li><strong>APK Acquisition:</strong> Secure collection and verification of Android applications</li>
+                <li><strong>Static Feature Extraction:</strong> Automated analysis without execution</li>
+                <li><strong>Dynamic Feature Extraction:</strong> Controlled execution in sandbox environment</li>
+                <li><strong>Feature Integration:</strong> Combination of static and dynamic features</li>
+                <li><strong>Classification:</strong> Random Forest-based malware detection</li>
+                <li><strong>Visualization:</strong> Comprehensive reporting and visualization generation</li>
+            </ol>
+        </section>
+
+        <section id="results">
+            <h2>Results & Analysis</h2>
+            
+            <h3>Performance Metrics</h3>
+            <p>
+                The Random Forest classifier demonstrated strong performance across key evaluation metrics:
+            </p>
+            <ul>
+                <li><strong>High Classification Accuracy:</strong> Effective discrimination between benign and malicious applications</li>
+                <li><strong>Low False Positive Rate:</strong> Minimal misclassification of legitimate applications</li>
+                <li><strong>Robust Feature Importance:</strong> Clear identification of most significant malware indicators</li>
+                <li><strong>Scalable Performance:</strong> Efficient processing of large APK datasets</li>
+            </ul>
+
+            <h3>Feature Analysis Insights</h3>
+            <p>
+                The research revealed important patterns in malware characteristics:
+            </p>
+            <ul>
+                <li><strong>Permission Patterns:</strong> Malicious apps often request excessive or unusual permissions</li>
+                <li><strong>API Usage:</strong> Specific API calls strongly correlate with malicious behavior</li>
+                <li><strong>Behavioral Signatures:</strong> Dynamic analysis reveals distinct malware execution patterns</li>
+                <li><strong>Network Behavior:</strong> Malicious apps show characteristic communication patterns</li>
+            </ul>
+
+            <h3>Visualization Capabilities</h3>
+            <p>
+                The system includes comprehensive visualization tools:
+            </p>
+            <ul>
+                <li><strong>Feature Importance Charts:</strong> Visual representation of most significant detection features</li>
+                <li><strong>Classification Results:</strong> Clear visualization of detection outcomes</li>
+                <li><strong>Performance Metrics:</strong> Graphical representation of model performance</li>
+                <li><strong>Comparative Analysis:</strong> Side-by-side comparison of benign vs. malicious characteristics</li>
+            </ul>
+
+            <h3>Practical Applications</h3>
+            <ul>
+                <li><strong>Mobile Security:</strong> Integration into mobile security solutions</li>
+                <li><strong>App Store Screening:</strong> Automated malware detection for application marketplaces</li>
+                <li><strong>Enterprise Security:</strong> Corporate mobile device management and security</li>
+                <li><strong>Research Platform:</strong> Foundation for advanced Android security research</li>
+            </ul>
+        </section>
+
+        <section id="publication">
+            <h2>Publication & Recognition</h2>
+            
+            <div class="project-item">
+                <h3>Conference Paper</h3>
+                <p>
+                    <strong>Title:</strong> "Machine Learning-based Android Malware Detection using Static and Dynamic Analysis"<br>
+                    <strong>Authors:</strong> Pratham Patel, Prof. Jizhou Tong (Gannon University)<br>
+                    <strong>Venue:</strong> Future Technology Conference (FTC) - SAI Conferences, 2024<br>
+                    <strong>Status:</strong> Accepted - To Appear
+                </p>
+                <p class="links">
+                    <a href="https://github.com/codewithinferno/MaliciousAPK">[GitHub Repository]</a>
+                    <a href="https://github.com/codewithinferno/MaliciousAPK/blob/main/README.md">[Documentation]</a>
+                </p>
+            </div>
+
+            <h3>Research Contributions</h3>
+            <ul>
+                <li><strong>Comprehensive Analysis Framework:</strong> Integration of static and dynamic analysis techniques</li>
+                <li><strong>Practical Implementation:</strong> Complete, deployable malware detection system</li>
+                <li><strong>Visualization Innovation:</strong> Advanced visualization suite for security analysis</li>
+                <li><strong>Open Source Contribution:</strong> Full codebase available for research community</li>
+            </ul>
+
+            <h3>Future Research Directions</h3>
+            <ul>
+                <li><strong>Deep Learning Integration:</strong> Incorporating neural networks for enhanced detection</li>
+                <li><strong>Real-time Analysis:</strong> Optimization for real-time malware detection</li>
+                <li><strong>Advanced Evasion Techniques:</strong> Research on detecting sophisticated malware</li>
+                <li><strong>Cross-platform Extension:</strong> Expanding to iOS and other mobile platforms</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p><a href="self-correcting-llm.html">← Previous: Self-Correcting LLM</a> | <a href="index.html">Back to Portfolio</a> | <a href="iot-anomaly-detection.html">Next: IoT Anomaly Detection →</a></p>
+        </footer>
+    </div>
+</body>
+</html>
